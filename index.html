@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DIAMOND BG ROYYY</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #e6f0ff;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      color: #004080;
+      margin-bottom: 5px;
+    }
+
+    h2.subjudul {
+      text-align: center;
+      color: #3366cc;
+      font-weight: normal;
+      margin-bottom: 20px;
+    }
+
+    .form-id {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .form-id input {
+      padding: 10px;
+      width: 80%;
+      max-width: 400px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .paket {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      margin: 20px 0;
+      overflow: hidden;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .paket img {
+      width: 150px;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .paket-info {
+      padding: 20px;
+      flex: 1;
+    }
+
+    .paket-info h3 {
+      margin: 0 0 10px;
+      color: #003366;
+    }
+
+    .paket-info p {
+      margin: 5px 0;
+    }
+
+    .btn-wa {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 15px;
+      background-color: #25d366;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .btn-wa:hover {
+      background-color: #1ebc59;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>DIAMOND BG ROYYY</h1>
+    <h2 class="subjudul">Diamond Free Fire</h2>
+
+    <div class="form-id">
+      <input type="text" id="playerId" placeholder="Masukkan ID Free Fire kamu..." />
+    </div>
+
+    <!-- Paket Diamond -->
+    <div class="paket">
+      <img src="https://cdn-icons-png.flaticon.com/512/1162/1162499.png" alt="70 Diamond" />
+      <div class="paket-info">
+        <h3>70 Diamond</h3>
+        <p>Harga: Rp10.000</p>
+        <a class="btn-wa" onclick="order(70)">Order via WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="paket">
+      <img src="https://cdn-icons-png.flaticon.com/512/1162/1162499.png" alt="140 Diamond" />
+      <div class="paket-info">
+        <h3>140 Diamond</h3>
+        <p>Harga: Rp19.000</p>
+        <a class="btn-wa" onclick="order(140)">Order via WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="paket">
+      <img src="https://cdn-icons-png.flaticon.com/512/1162/1162499.png" alt="355 Diamond" />
+      <div class="paket-info">
+        <h3>355 Diamond</h3>
+        <p>Harga: Rp49.000</p>
+        <a class="btn-wa" onclick="order(355)">Order via WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="paket">
+      <img src="https://cdn-icons-png.flaticon.com/512/1162/1162499.png" alt="720 Diamond" />
+      <div class="paket-info">
+        <h3>720 Diamond</h3>
+        <p>Harga: Rp95.000</p>
+        <a class="btn-wa" onclick="order(720)">Order via WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="paket">
+      <img src="https://cdn-icons-png.flaticon.com/512/1162/1162499.png" alt="1000 Diamond" />
+      <div class="paket-info">
+        <h3>1000 Diamond</h3>
+        <p>Harga: Rp130.000</p>
+        <a class="btn-wa" onclick="order(1000)">Order via WhatsApp</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function order(diamond) {
+      const id = document.getElementById("playerId").value.trim();
+      if (!id) {
+        alert("Silakan masukkan ID Free Fire kamu terlebih dahulu.");
+        return;
+      }
+      const nomor = "6282278960050";
+      const pesan = `Halo admin, saya ingin beli ${diamond} Diamond Free Fire. ID: ${id}`;
+      const url = `https://wa.me/${nomor}?text=${encodeURIComponent(pesan)}`;
+      window.open(url, "_blank");
+    }
+  </script>
+</body>
+</html>
